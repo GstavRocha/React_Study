@@ -1,9 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import 'primereact/resources/themes/bootstrap4-dark-blue/theme.css';
+import PrimeReact from 'primereact/api';
 
-function MyBotao(){
+//recurso necessário para animações do riple
+PrimeReact.ripple = true;
+function click(){
+  const teste = true;
+  if(teste === true){
+    console.log(teste)
+  }else{
+    console.log(teste,'false')
+  }
+}
+
+function Button(){
   return(
-    <button> Teste</button>
+    <button>TESTE</button>
   );
 }
 
@@ -23,7 +36,8 @@ function App() {
         >
           Gustavo aprendendo React
         </a>
-        <MyBotao/>
+        <p className='p-text'> Teste texto</p>
+        <Button label="Button" onClick={click} className="p-button-lg" />
       </header>
     </div>
   );
